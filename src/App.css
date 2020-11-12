@@ -1,38 +1,121 @@
-.App {
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height:1.6;
+  /* color: white; */
+}
+
+#root{
+  /* border:3px solid black; */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.app{
+  /* border: 2px solid black; */
+  width: 100%;
+  flex: 1;
+}
+h1{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.masonry-container{
+  width:95%;
+  margin:auto;
+  margin-top:10px;
+}
+.masonry{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: stretch;
+	width: 100%;
+	margin: auto;
+}
+.column{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: stretch;
+	flex-grow: 1;
+}
+.tile{
+  margin: 4px;
+  cursor: pointer;
+}
+.image-tile{
+  box-shadow: 0 1px 1px 2px rgba(0,0,0, .15);
+  border-radius: 10px;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.modal {
+  /* padding:150px; */
+  position: fixed;
+  z-index: 500;
+  background-color: white;
+  width: 70%;
+  height:100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-flow:column nowrap;
+  align-items: center;
+  align-content: stretch;
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px black;
+  padding: 16px;
+  left: 15%;
+  top: 0%;
+  box-sizing: border-box;
+  transition: all 1s ease-out;
 }
-
-.App-link {
-  color: #61dafb;
+.modal-img{
+  box-shadow: 0 1px 1px 2px rgba(0,0,0, .15);
+  border-radius: 10px;
+  width: 100%;
+  height:auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.close-btn{
+  position:absolute;
+  top:10px;
+  left:96%;
+  cursor: pointer;
+}
+.imgc{
+  height: auto;
+  flex-basis: 50%;
+  z-index:600;
+}
+.prev-btn{
+  position: absolute;
+  top:50%;
+  left:2%;
+  font-weight: bolder;
+  font-size: 20px;
+  border:none;
+  padding:20px;
+  border-radius: 50%;
+  cursor:pointer;
+  outline:none;
+}
+.prev-btn:hover{
+  background-color: #99AAAB;
+}
+.next-btn{
+  position: absolute;
+  top:50%;
+  right:2%;
+  font-weight: bolder;
+  font-size: 20px;
+  border:none;
+  padding:20px;
+  border-radius: 50%;
+  cursor:pointer;
+  outline:none;
+}
+.next-btn:hover{
+  background-color: #99AAAB;
 }
